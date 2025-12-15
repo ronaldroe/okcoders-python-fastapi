@@ -61,3 +61,5 @@ In this lesson, we will build out the service and repository layers for the User
 ### Lesson 4 - Address API, Database Relationships
 
 In this lesson, we will design the relationship between addresses and users and create the necessary API endpoints for address CRUD.
+
+We will also design and implement endpoints for assigning and unassigning addresses to users
