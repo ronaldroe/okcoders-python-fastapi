@@ -35,7 +35,7 @@ At the end of this course, you will have:
 
 Required software:
   - Latest Docker with Docker Desktop
-    - If you're using Windows, (please see this guide)[https://docs.docker.com/desktop/setup/install/windows-install/], as there are more steps on that platform
-  - (Postman)[https://www.postman.com/downloads/]
-    - Or if you prefer another, similar API client like (Insomnia)[https://insomnia.rest/download], that is fine
+    - If you're using Windows, [please see this guide](https://docs.docker.com/desktop/setup/install/windows-install/), as there are more steps on that platform
+  - [Postman](https://www.postman.com/downloads/)
+    - Or if you prefer another, similar API client like [Insomnia](https://insomnia.rest/download), that is fine
   - Code Editor of choice
