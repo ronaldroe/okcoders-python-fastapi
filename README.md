@@ -58,6 +58,8 @@ We will go over the basics of the Service-Respository pattern and how to use it 
 
 In this lesson, we will build out the service and repository layers for the User API and add persistence (via SQLite).
 
+We will complete the User API CRUD endpoints.
+
 ### Lesson 4 - Address API, Database Relationships
 
 In this lesson, we will design the relationship between addresses and users and create the necessary API endpoints for address CRUD.
