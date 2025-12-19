@@ -30,8 +30,7 @@ At the end of this course, you will have:
   - 9 - 11 Endpoints
     - 1 Health check endpoint
     - 4 User CRUD endpoints
-    - 4 Address CRUD endpoints
-      - 2 more Address endpoints if time allows
+    - 6 Address CRUD endpoints
 
 Required software:
   - Latest Docker with Docker Desktop
@@ -64,4 +63,6 @@ We will complete the User API CRUD endpoints.
 
 In this lesson, we will design the relationship between addresses and users and create the necessary API endpoints for address CRUD.
 
-We will also design and implement endpoints for assigning and unassigning addresses to users
+### Lesson 5 - Complete Address API
+
+In this lesson, we will complete the Address API by allowing addresses to be assigned and deleted from customers
