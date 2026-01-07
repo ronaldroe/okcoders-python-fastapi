@@ -65,6 +65,10 @@ We will complete the User API CRUD endpoints. Data will persist in an in-memory 
 
 In this lesson, we will design the relationship between addresses and users and create the necessary API endpoints for address CRUD.
 
+This will include linking tables, creating relationships, indices, constraints, etc.,
+
 ### Lesson 5 - Complete Address API
 
-In this lesson, we will complete the Address API by allowing addresses to be assigned and deleted from customers
+In this lesson, we will complete the Address API by creating endpoints to allow addresses to be assigned and deleted from customers
+
+We will implement our link table relationship between users and addresses in the user API, and complete the flow for our user microservice!
