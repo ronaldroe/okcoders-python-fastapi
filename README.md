@@ -10,6 +10,7 @@ Technologies we will use:
   - FastAPI
   - Pydantic
   - SQLAlchemy
+  - OpenAPI (Swagger)
 
 We will also learn about:
   - Clean Architecture
@@ -21,13 +22,14 @@ We will also learn about:
   - Enumeration
   - Request/Response Schemas
   - Database Planning and Modeling
+  - Database Access via an Object Relational Mapping (ORM) library (SQLAlchemy)
   - Decorators
 
 At the end of this course, you will have:
   - A working, RESTful API Microservice for handling Users within an application
   - Containerized via Docker
   - Persistence in a database
-  - 9 - 11 Endpoints
+  - 11 Endpoints with OpenAPI docs
     - 1 Health check endpoint
     - 4 User CRUD endpoints
     - 6 Address CRUD endpoints
@@ -57,7 +59,7 @@ We will go over the basics of the Service-Respository pattern and how to use it 
 
 In this lesson, we will build out the service and repository layers for the User API and add persistence (via SQLite).
 
-We will complete the User API CRUD endpoints.
+We will complete the User API CRUD endpoints. Data will persist in an in-memory SQLite database accessed by ORM.
 
 ### Lesson 4 - Address API, Database Relationships
 
