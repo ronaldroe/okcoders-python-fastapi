@@ -24,6 +24,7 @@ We will also learn about:
   - Database Planning and Modeling
   - Database Access via an Object Relational Mapping (ORM) library (SQLAlchemy)
   - Decorators
+  - Bearer Token Authentication
 
 At the end of this course, you will have:
   - A working, RESTful API Microservice for handling Users within an application
@@ -37,17 +38,19 @@ At the end of this course, you will have:
 Required software:
   - Latest Docker with Docker Desktop
     - If you're using Windows, [please see this guide](https://docs.docker.com/desktop/setup/install/windows-install/), as there are more steps on that platform
-  - [Postman](https://www.postman.com/downloads/)
-    - Or if you prefer another, similar API client like [Insomnia](https://insomnia.rest/download), that is fine
   - Code Editor of choice
+
+Optional Software:
+  - [Postman](https://www.postman.com/downloads/)
+    - Or if you prefer another, similar API client like [Insomnia](https://insomnia.rest/download), that is fine.
 
 ## Lessons
 
 ### Lesson 1 - Introduction, Scaffolding, Health Check, Decorators
 
-In this lesson, we will go over the basic structure of the project, understanding the Dockerfile, docker-compose.yml, requirements.txt and main.py files. These files form the basic scaffolding of our project.
+In this lesson, we will go over the basic structure of the project, understanding the Dockerfile, docker-compose.yml, requirements.txt and main.py files. These files form the basic scaffolding of our project. We will also learn about schemas and their advantages.
 
-We will complete a health check and get the microservice running in Docker with a successful health check response. We will cover a basic understanding of decorators, what they're for and how they fit into our project.
+We will complete a health check with a response schema and get the microservice running in Docker with a successful health check response. We will cover enums, and get a basic understanding of decorators, what they're for and how they fit into our project.
 
 ### Lesson 2 - Basics of the Service-Repository Pattern, Iterative Development, Schemas
 
@@ -72,3 +75,9 @@ This will include linking tables, creating relationships, indices, constraints, 
 In this lesson, we will complete the Address API by creating endpoints to allow addresses to be assigned and deleted from customers
 
 We will implement our link table relationship between users and addresses in the user API, and complete the flow for our user microservice!
+
+### Lesson 6 - Bearer Token Authentication
+
+In this lesson, we will add Bearer Token authentication to the microservice's APIs to control access. This is a less secure, but common and simple pattern to implement.
+
+We will use FastAPI's HTTPBearer class to implement a simple Bearer Token authentication scheme. We will additonally discuss other authentication methods offered by FastAPI's `security` module.
