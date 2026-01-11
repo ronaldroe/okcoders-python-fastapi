@@ -38,9 +38,11 @@ At the end of this course, you will have:
 Required software:
   - Latest Docker with Docker Desktop
     - If you're using Windows, [please see this guide](https://docs.docker.com/desktop/setup/install/windows-install/), as there are more steps on that platform
-  - [Postman](https://www.postman.com/downloads/)
-    - Or if you prefer another, similar API client like [Insomnia](https://insomnia.rest/download), that is fine
   - Code Editor of choice
+
+Optional Software:
+  - [Postman](https://www.postman.com/downloads/)
+    - Or if you prefer another, similar API client like [Insomnia](https://insomnia.rest/download), that is fine.
 
 ## Lessons
 
@@ -79,3 +81,11 @@ We will implement our link table relationship between users and addresses in the
 In this lesson, we will add Bearer Token authentication to the microservice's APIs to control access. This is a less secure, but common and simple pattern to implement.
 
 We will use FastAPI's HTTPBearer class to implement a simple Bearer Token authentication scheme. We will additonally discuss other authentication methods offered by FastAPI's `security` module.
+
+## Recommendations
+
+A few recommendations and some other information for the course.
+
+First, the layout of this repository is as such: There is one branch for each lesson, and then a final branch. Each lesson's branch has the completed version of the previous lesson. So, I recommend keeping two clones of the repo on your local machine. This way, if you get stuck and need a quick nudge, you can just load up the next lesson's branch and see what the solution looks like. 
+
+There are two ways to go about this course in terms of git branching. You could either create a branch from the first lesson and continue adding to it and branching from it each week, or you could start each week with that week's branch. I recommend the former if you can swing it, but the latter works well as a fast forward if you need it.
