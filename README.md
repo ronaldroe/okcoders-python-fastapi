@@ -24,6 +24,7 @@ We will also learn about:
   - Database Planning and Modeling
   - Database Access via an Object Relational Mapping (ORM) library (SQLAlchemy)
   - Decorators
+  - Bearer Token Authentication
 
 At the end of this course, you will have:
   - A working, RESTful API Microservice for handling Users within an application
@@ -72,3 +73,9 @@ This will include linking tables, creating relationships, indices, constraints, 
 In this lesson, we will complete the Address API by creating endpoints to allow addresses to be assigned and deleted from customers
 
 We will implement our link table relationship between users and addresses in the user API, and complete the flow for our user microservice!
+
+### Lesson 6 - Bearer Token Authentication
+
+In this lesson, we will add Bearer Token authentication to the microservice's APIs to control access. This is a less secure, but common and simple pattern to implement.
+
+We will use FastAPI's HTTPBearer class to implement a simple Bearer Token authentication scheme. We will additonally discuss other authentication methods offered by FastAPI's `security` module.
