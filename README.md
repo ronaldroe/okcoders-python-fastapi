@@ -48,7 +48,7 @@ Required software:
 
 In this lesson, we will go over the basic structure of the project, understanding the Dockerfile, docker-compose.yml, requirements.txt and main.py files. These files form the basic scaffolding of our project. We will also learn about schemas and their advantages.
 
-We will complete a health check with a response schema and get the microservice running in Docker with a successful health check response. We will cover a basic understanding of decorators, what they're for and how they fit into our project.
+We will complete a health check with a response schema and get the microservice running in Docker with a successful health check response. We will cover enums, and get a basic understanding of decorators, what they're for and how they fit into our project.
 
 ### Lesson 2 - Basics of the Service-Repository Pattern, Iterative Development, Schemas
 
