@@ -21,7 +21,7 @@ def health_check():
         status_code=status.HTTP_200_OK,
         content=jsonable_encoder(
             HealthSchema(
-                name="User Microservice",
+                name=f"{os.environ.get('SERVICE_NAME', 'User')} Microservice",
                 status=HealthStatuses.HEALTHY,
                 uptime=uptime,
                 version=os.environ.get("VERSION", "0.1.0"),
