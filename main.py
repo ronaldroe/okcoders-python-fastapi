@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from api.health import health_router
+from api.user import user_router
 
 app = FastAPI(
     docs_url="/user/docs",
@@ -38,3 +39,4 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 
 app.include_router(health_router, prefix="/health", tags=["Health"])
+app.include_router(user_router, prefix="/user", tags=["User"])
