@@ -1,10 +1,8 @@
 from pydantic import BaseModel, ConfigDict
 
-from uuid import UUID
-
 
 class UserResponseSchema(BaseModel):
-    id: UUID
+    id: str
     first_name: str
     last_name: str
     email: str
