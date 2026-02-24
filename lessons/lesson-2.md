@@ -169,7 +169,7 @@ The `CreateUserRequestSchema` is very similar to the `UserResponseSchema`, minus
 
 One way to create this schema is to recreate the same one without the `id` field.
 
-Another option is to create a `CreateUserRequestSchema` and have `UserResponseSchema` extend it and add the ID. I will demonstrate this method, but how you implement for this project is up to you. There are advantages and disadvantages to each.
+Another option is to create a `CreateUserRequestSchema` and have `UserResponseSchema` extend it and add the ID. Alternatively, you could have a `BaseUserRequestSchema`, and do something like `from schemas.requests.base import BaseUserRequestSchema as CreateUserRequestSchema` for your create endpoint. I will demonstrate this method, but how you implement for this project is up to you. There are advantages and disadvantages to each.
 
 #### Response Schema
 
