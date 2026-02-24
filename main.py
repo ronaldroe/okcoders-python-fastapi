@@ -4,8 +4,8 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from api.health import health_router
-from api.user import user_router
+from api.health_api import health_router
+from api.user_api import user_router
 
 app = FastAPI(
     docs_url="/user/docs",
