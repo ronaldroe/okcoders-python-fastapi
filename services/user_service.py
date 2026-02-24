@@ -20,3 +20,19 @@ class UserService:
             status_code=200,
             content=jsonable_encoder(UserResponseSchema(**user_data)),
         )
+
+    @staticmethod
+    def create_user(request) -> JSONResponse:
+        user_data = {
+            "id": 1,
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "john.doe@example.com",
+            "phone": "+1234567890",
+            "is_active": True,
+        }
+
+        return JSONResponse(
+            status_code=201,
+            content=jsonable_encoder(UserResponseSchema(**user_data)),
+        )
