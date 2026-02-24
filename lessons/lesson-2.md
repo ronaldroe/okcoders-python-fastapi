@@ -151,7 +151,7 @@ Take a moment to test your new endpoint. Ensure it returns the data you expect i
 
 `branch: lesson-2-1`
 
-#### Service layer
+#### Service Layer
 
 The second iteration for each endpoint is its service layer. The health endpoint has no need to communicate with any other layers, as it performs no logic. It gathers information from the environment and returns it. Our user endpoint, however will need to eventually access a database, and so will need to call our repository layer. This will be done from the service layer. 
 
