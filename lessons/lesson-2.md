@@ -151,7 +151,7 @@ Take a moment to test your new endpoint. Ensure it returns the data you expect i
 
 `branch: lesson-2-1`
 
-#### Service layer
+#### Service Layer
 
 The second iteration for each endpoint is its service layer. The health endpoint has no need to communicate with any other layers, as it performs no logic. It gathers information from the environment and returns it. Our user endpoint, however will need to eventually access a database, and so will need to call our repository layer. This will be done from the service layer. 
 
@@ -169,7 +169,7 @@ The `CreateUserRequestSchema` is very similar to the `UserResponseSchema`, minus
 
 One way to create this schema is to recreate the same one without the `id` field.
 
-Another option is to create a `CreateUserRequestSchema` and have `UserResponseSchema` extend it and add the ID. Alternatively, you could have a `BaseUserRequestSchema`, and do something like `from schemas.requests.base import BaseUserRequestSchema as CreateUserRequestSchema` for your create endpoint. I will demonstrate this method, but how you implement for this project is up to you. There are advantages and disadvantages to each.
+Another option is to create a `CreateUserRequestSchema` and have `UserResponseSchema` extend it and add the ID. Alternatively, you could have a `BaseUserSchema`, and do something like `from schemas.base import BaseUserSchema as CreateUserRequestSchema` for your create endpoint. I will demonstrate this method, but how you implement for this project is up to you. There are advantages and disadvantages to each. This is the method we will use for this project.
 
 #### Response Schema
 
