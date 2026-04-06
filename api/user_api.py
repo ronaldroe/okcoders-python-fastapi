@@ -3,7 +3,6 @@ from fastapi.responses import JSONResponse
 
 from schemas.base.base_user_schema import BaseUserSchema
 from schemas.responses.user_response_schema import UserResponseSchema
-from services.user_service import UserService
 
 user_router = APIRouter()
 
@@ -14,7 +13,14 @@ user_router = APIRouter()
     response_model=UserResponseSchema,
 )
 def get_user(user_id: str) -> JSONResponse:
-    return UserService.get_user(user_id)
+    return UserResponseSchema(
+        id=user_id,
+        first_name="John",
+        last_name="Doe",
+        email="john.doe@example.com",
+        phone="+1234567890",
+        is_active=True,
+    )
 
 
 @user_router.post(
@@ -23,4 +29,11 @@ def get_user(user_id: str) -> JSONResponse:
     response_model=UserResponseSchema,
 )
 def create_user(request: Request, user: BaseUserSchema) -> JSONResponse:
-    return UserService.create_user(user)
+    return UserResponseSchema(
+        id="new_user_id",
+        first_name=user.first_name,
+        last_name=user.last_name,
+        email=user.email,
+        phone=user.phone,
+        is_active=True,
+    )
