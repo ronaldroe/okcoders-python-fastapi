@@ -60,9 +60,9 @@ We will go over the basics of the Service-Respository pattern and how to use it 
 
 ### Lesson 3 - Complete User API CRUD, Add Database Persistence
 
-In this lesson, we will build out the service and repository layers for the User API and add persistence (via SQLite).
+In this lesson, we will build out the service and repository layers for the User API and add persistence (via SQLite). 
 
-We will complete the User API CRUD endpoints. Data will persist in an in-memory SQLite database accessed by ORM.
+We will complete the User API CRUD endpoints. Data will persist in an in-memory SQLite database accessed by ORM. We'll learn about Object Relational Mapping (ORM), it's advantages and disadvantages, and we'll build models to work with the repository with SQLAlchemy, an ORM for Python
 
 ### Lesson 4 - Address API, Database Relationships
 
