@@ -12,8 +12,12 @@
   1. [Get and Create User Endpoints](#get-and-create-user-endpoints)
     1. [User Model](#user-model)
     2. [Repository Layer](#repository-layer)
+  1. [Update and Delete User Endpoints](#update-and-delete-endpoints)
+    1. [Schemas](#schemas)
+    2. [Repository Layer](#repository-layer-1)
 4. [User Repository Layer](#user-repository-layer)
-  1. [Building Queries](#building-queries)
+  1. [Database Connection](#database-connection)
+  2. [Building Queries](#building-queries)
     1. [From Models](#from-models)
     2. [With SQL Query](#with-sql-query)
 
