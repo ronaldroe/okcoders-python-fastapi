@@ -1,4 +1,5 @@
 import logging
+from traceback import format_exc
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -31,7 +32,11 @@ logger: logging.Logger = logging.getLogger(__name__)
 
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Unhandled exception: {exc}", exc_info=True)
+    logger.error(
+        f"Unhandled exception: {exc} | method={request.method} url={request.url} "
+        f"client={request.client} headers={dict(request.headers)}\n{format_exc()}",
+        exc_info=True,
+    )
     return JSONResponse(
         status_code=500,
         content={"detail": "Internal Server Error"},
