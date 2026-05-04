@@ -7,6 +7,10 @@ from fastapi.responses import JSONResponse
 
 from api.health_api import health_router
 from api.user_api import user_router
+from db.connection import Base, engine
+from db.models import user_record  # noqa: F401 — registers models with Base
+
+Base.metadata.create_all(engine, checkfirst=True)
 
 app = FastAPI(
     docs_url="/user/docs",
@@ -39,7 +43,10 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
     return JSONResponse(
         status_code=500,
-        content={"detail": "Internal Server Error"},
+        content={
+            "detail": "Internal Server Error",
+            "message": str(exc),
+        },
     )
 
 
