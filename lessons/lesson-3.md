@@ -21,9 +21,9 @@
     1. [From Models](#from-models)
     2. [With SQL Query](#with-sql-query)
 
-### Object Relational Mapping
+## Object Relational Mapping
 
-#### Concept
+### Concept
 
 Object Relational Mapping (ORM) is the process of _mapping_ incompatible _objects_ to _relational models_. In other words, when your repository needs to request a user's data, it needs to translate the schema into a structure the relational database (in our case, SQLite) can understand. To facilitate this mapping, we use models. 
 
@@ -31,7 +31,7 @@ Models look a lot like schemas, in that they have field names, each field has a 
 
 The example we will use in a future lesson is a sub-object containing the user's address information. We will update the response schema to include a billing and shipping address, but those addresses will come from an address table, not from the user's record on the user table.
 
-#### Advantages
+### Advantages
 
 There are two primary advantages to using an ORM:
 1. Security
@@ -51,9 +51,9 @@ __Performance__ - ORMs generally focus on making queries as stable and reliable 
 
 __Abstraction__ - There is such a thing as _too_ much abstraction. It can make troubleshooting difficult, as errors or other issues may be hidden or lost behind multiple layers of abstraction. Furthermore, if the engineer using the ORM doesn't understand the underlying SQL, dumping may not be useful to help figure out any issues.
 
-### Models
+## Models
 
-#### Concept
+### Concept
 
 A model is a class that is a representation of the data in a database, and provides metadata about a table, its columns or fields, fields and their types, along with defaults and other meta. Models also allow for mapping and transform functionality, and form the primary structure used to communicate with a database via the ORM. 
 
@@ -73,15 +73,15 @@ class UserRecord(Base):
 
 Models can also contain relationships within their class definitions (we'll see this in a future lesson), as well as calculated fields, and more. 
 
-### User Service Layer
+## User Service Layer
 
 In the previous lesson, we created the basic service layer that returns dummy data to our API layer. This PR will complete the service layer, which will request data from the repository layer. At first, the repository layer will return dummy data, and in the next part of this lesson, we'll complete the repository layer for the Get and Create User endpoints.
 
 `branch: lesson-3-1`
 
-#### Get User Endpoint
+### Get User Endpoint
 
-##### User Model
+#### User Model
 
 The user model in the Models Concept section above is the model we'll use for our API:
 
@@ -97,23 +97,23 @@ class UserRecord(Base):
   is_active = Column("is_active", Boolean, default=True)
 ```
 
-##### Repository Layer
+#### Repository Layer
 
 In the second PR for this lesson, we'll complete the repository layer. This will include setting up the database (SQLite), connecting to it from the repository and methods to get and create a user. 
 
 Note that once these changes are made, everything's "real". In other words, you will only be able to get a user with its real id after it's been created.
 
-### User Repository Layer
+## User Repository Layer
 
-#### Building Queries
+### Building Queries
 
 Queries can be passed to the ORM in two primary ways:
 
-##### From Models
+#### From Models
 
 Once the user's request data is passed to the model, the model can be passed directly to the ORM to query the database
 
-##### With SQL Query
+#### With SQL Query
 
 SQLAlchemy can also accept SQL queries directly to run against the database. This can be useful for troubleshooting queries, or bypassing performance bottlenecks caused by how the ORM builds a given query. And sometimes a query may be complex enough that it's actually easier to pass directly rather than to build it out with the ORM functionally.
 
